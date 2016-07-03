@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -127,3 +128,4 @@ private:
 }
 #include "Impl/SparseAutoencoderError.inl"
 #endif
+

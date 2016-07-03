@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * \brief       Defines Fortran naming conventions when binding to lapack routines
  *
@@ -59,3 +60,4 @@
 #endif
 
 #endif
+

@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -130,3 +131,4 @@ namespace shark{
 	double entropy(const Cauchy<RngType> & distribution);
 }
 #endif
+

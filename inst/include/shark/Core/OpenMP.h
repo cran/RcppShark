@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -33,11 +34,14 @@
 #ifndef SHARK_CORE_OPENMP_H
 #define SHARK_CORE_OPENMP_H
 
-#ifdef SHARK_USE_OPENMP
+#include <shark/Core/Shark.h>
+
+#undef SHARK_USE_OPENMP
+#ifdef SHARK_USE_OPENMP 
 #include <omp.h>
 #include <boost/config.hpp>
 
-#ifdef BOOST_MSVC
+#if defined(BOOST_MSVC) || defined(__INTEL_COMPILER)
 #define SHARK_PARALLEL_FOR __pragma(omp parallel for)\
 for
 
@@ -48,7 +52,7 @@ for
 _Pragma ( "omp parallel for" )\
 for
 
-#define SHARK_CRITICAL_REGION _Pragma("omp critical")
+#define SHARK_CRITICAL_REGION _Pragma("omp critical (globalSharkLock)")
 #endif
 
 #define SHARK_NUM_THREADS (std::size_t)(omp_in_parallel()?omp_get_num_threads():omp_get_max_threads())
@@ -62,3 +66,4 @@ for
 #endif
 
 #endif
+

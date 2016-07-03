@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -157,3 +158,4 @@ void trsm(
 
 }}}
 #endif
+

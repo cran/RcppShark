@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -107,9 +108,15 @@ public:
 	}
 };
 
-template<typename RngType>
-double entropy(const Normal< RngType > & normal);
+///\brief Draws a number from the normal distribution with given mean and variance by drawing random numbers from rng.
+template<class RngType>
+double gauss(RngType& rng, double mean, double variance){
+	Normal<RngType> dist(rng, mean, variance);
+	return dist();
+}
+
 
 } // namespace shark {
 
 #endif // SHARK_RNG_NORMAL_H
+

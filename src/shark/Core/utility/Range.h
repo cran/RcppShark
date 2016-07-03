@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -65,3 +66,4 @@ get( Range const& range, std::size_t i){
 
 }
 #endif
+

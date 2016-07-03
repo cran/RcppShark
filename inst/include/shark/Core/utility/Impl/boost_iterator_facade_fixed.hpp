@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 // (C) Copyright David Abrahams 2002.
 // (C) Copyright Jeremy Siek    2002.
 // (C) Copyright Thomas Witt    2002.
@@ -532,3 +533,4 @@ BOOST_ITERATOR_FACADE_PLUS((
 #endif
 
 #endif // BOOST_ITERATOR_FACADE_23022003THW_HPP
+

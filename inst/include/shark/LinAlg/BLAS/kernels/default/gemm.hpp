@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -238,3 +239,4 @@ void gemm(
 }}}
 
 #endif
+

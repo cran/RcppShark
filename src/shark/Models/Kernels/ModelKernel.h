@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 //===========================================================================
 /*!
  * 
@@ -260,3 +261,4 @@ typedef ModelKernel<CompressedRealVector> CompressedModelKernel;
 
 }
 #endif
+

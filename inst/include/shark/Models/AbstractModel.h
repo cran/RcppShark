@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 //===========================================================================
 /*!
  * 
@@ -339,3 +340,4 @@ void initRandomUniform(AbstractModel<InputType, OutputType>& model, double l, do
 
 
 #endif
+

@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -159,6 +160,7 @@ namespace shark{
 	};
 }
 #endif
+
 
 
 

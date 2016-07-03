@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -72,6 +73,18 @@ void gemv_impl(
 	}
 }
 
+//unknown orientation is dispatched to row_major
+template<class ResultV, class M, class V>
+void gemv_impl(
+	matrix_expression<M> const& A,
+	vector_expression<V> const& x,
+	vector_expression<ResultV>& result,
+	typename ResultV::value_type alpha,
+	unknown_orientation
+) {
+	gemv_impl(A,x,result,alpha,row_major());
+}
+
 // result += alpha * A * x
 template<class ResultV, class M, class V>
 void gemv(
@@ -90,3 +103,4 @@ void gemv(
 
 }}}
 #endif
+

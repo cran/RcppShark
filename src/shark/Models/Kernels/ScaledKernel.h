@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 //===========================================================================
 /*!
  * 
@@ -152,3 +153,4 @@ typedef ScaledKernel<ConstRealVectorRange> DenseScaledMklKernel;
 
 }
 #endif
+

@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -132,3 +133,4 @@ class DiffGeometric: public boost::variate_generator<RngType*,DiffGeometric_dist
 
 }
 #endif
+

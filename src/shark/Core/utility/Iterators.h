@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -349,3 +350,4 @@ private:
 
 }
 #endif
+

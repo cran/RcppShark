@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -62,7 +63,6 @@ void RpropMinus::init(
         double initDelta
 ) {
         checkFeatures(objectiveFunction);
-        objectiveFunction.init();
         
         m_parameterSize = startingPoint.size();
         m_delta.resize(m_parameterSize);
@@ -311,3 +311,4 @@ void IRpropMinus::step(ObjectiveFunctionType const& objectiveFunction) {
         }
         m_best.value = objectiveFunction.evalDerivative(m_best.point,m_derivative);
 }
+

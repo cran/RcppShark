@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 //===========================================================================
 /*!
  * 
@@ -263,3 +264,4 @@ typedef ARDKernelUnconstrained<ConstRealVectorRange> DenseARDMklKernel;
 
 }
 #endif
+

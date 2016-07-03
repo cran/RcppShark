@@ -1,3 +1,4 @@
+// [[Rcpp::depends(BH)]]
 /*!
  * 
  *
@@ -203,3 +204,4 @@ zipKeyValuePairs(Range1& range1, Range2& range2){
 
 }
 #endif
+
